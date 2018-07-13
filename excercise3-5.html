@@ -44,12 +44,13 @@
 
         function Badge(props) {
             const user = props.user;
-            return (
-                <div>
-                    <Avatar src={user.img}/>
-                    <Label name={user.name}/>
-                    <ScreenName username={user.username}/>
-                </div> 
+            
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(Avatar, { src: user.img }),
+                React.createElement(Label, { name: user.name }),
+                React.createElement(ScreenName, { username: user.username }),
             )
         }
 
