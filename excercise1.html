@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React App</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+
+    <!-- Making things simpler with JSX-->
+
+    <div id="app"></div>
+
+    <script type='text/babel'>
+        
+        function Badge (props){
+            return (
+                <div>
+                    <a href={props.link}> <img src={props.img} /> </a>
+                    <h1>Name: {props.name}</h1>
+                    <h3>Username: <a href={props.link}> {props.username} </a> </h3>
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+            <Badge
+                name = 'Bablu Kumar'
+                username = '@tefletonpost'
+                img = 'https://pbs.twimg.com/profile_images/997506576469573632/JfMa4mpt_400x400.jpg'
+                link = 'https://twitter.com/hacback17'
+            />,
+            document.getElementById('app')
+        )
+
+        
+    </script>
+</body>
+</html>
